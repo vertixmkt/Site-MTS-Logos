@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>MTS Logos | Handcrafted Lettering &amp; Exclusive Digital Art</title>
+  <meta name="description" content="Custom logos and lettering hand-drawn by a former tattoo artist. Unique visual identity for your brand. Starting at $250 USD." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MTS Logos | Handcrafted Lettering &amp; Exclusive Digital Art" />
+  <meta property="og:description" content="Custom logos and lettering hand-drawn by a former tattoo artist. Unique visual identity for your brand. Starting at $250 USD." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.instagram.com/mtslogos/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400;1,14..32,600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    @font-face {
+      font-family: 'Old London';
+      src: url('old_london/OldLondon.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===========================
+       DESIGN SYSTEM TOKENS
+    =========================== */
+    :root {
+      /* Backgrounds */
+      --bg-primary:   #161719;
+      --bg-secondary: #111213;
+      --bg-card:      #1E1F22;
+      --bg-card-alt:  #212225;
+
+      /* Accent — orange-red from design system */
+      --accent:         #FA6F45;
+      --accent-hover:   #F2673D;
+      --accent-muted:   rgba(250,111,69,0.08);
+      --accent-border:  rgba(250,111,69,0.28);
+      --accent-glow:    rgba(250,110,67,0.12);
+
+      /* Text */
+      --text-primary:   #DFD9D7;
+      --text-secondary: #888891;
+      --text-muted:     #5F5F66;
+
+      /* Borders */
+      --border:         rgba(67,67,70,0.55);
+      --border-light:   rgba(255,255,255,0.06);
+      --border-subtle:  rgba(255,255,255,0.04);
+
+      /* CTA */
+      --cta-bg:    #FA6F45;
+      --cta-color: #161719;
+      --cta-hover: #F2673D;
+
+      /* Type */
+      --font-display: 'Inter', sans-serif;
+      --font-body:    'Inter', sans-serif;
+
+      /* Shape */
+      --radius:    8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+
+      --transition: 0.2s ease;
+    }
+
+    /* ===========================
+       RESET & BASE
+    =========================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img  { display: block; max-width: 100%; }
+    a    { color: inherit; text-decoration: none; }
+    ul   { list-style: none; }
+
+    /* ===========================
+       LAYOUT
+    =========================== */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section { padding: 96px 0; }
+    .section--alt { background-color: var(--bg-secondary); }
+
+    /* ===========================
+       TYPOGRAPHY — DS Presets
+    =========================== */
+    /* Display / Hero headline — 60px */
+    h1, .t-display {
+      font-family: 'Old London', serif;
+      font-size: clamp(2.4rem, 5.5vw, 3.75rem);
+      font-weight: normal;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+      color: var(--text-primary);
+    }
+
+    /* Section headline */
+    .t-headline {
+      font-family: 'Old London', serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: normal;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: var(--text-primary);
+    }
+
+    /* Module heading */
+    .t-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+    }
+
+    /* Card title */
+    .t-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    /* Body intro */
+    .t-intro {
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    /* Standard body */
+    .t-body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    /* Label */
+    .t-label {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--text-primary);
+    }
+
+    /* Supporting */
+    .t-support {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    /* Micro */
+    .t-micro {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: -0.005em;
+    }
+
+    /* Accent text */
+    .t-accent { color: var(--accent); }
+
+    /* Utilities */
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin: 0 auto; }
+
+    /* ===========================
+       SECTION ANATOMY
+    =========================== */
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      max-width: 580px;
+      margin-bottom: 0;
+    }
+
+    .section-divider {
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 20px 0;
+    }
+
+    .section-divider--center { margin: 20px auto; }
+
+    /* ===========================
+       BUTTONS — DS style
+    =========================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: var(--radius-lg);
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      border: none;
+      transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    /* Primary — orange solid */
+    .btn--primary {
+      background: var(--cta-bg);
+      color: var(--cta-color);
+    }
+
+    .btn--primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(250,111,69,0.30);
+    }
+
+    /* Ghost — frosted */
+    .btn--ghost {
+      background: rgba(255,255,255,0.06);
+      color: var(--text-primary);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .btn--ghost:hover {
+      opacity: 0.72;
+      transform: translateY(-1px);
+    }
+
+    /* Outline accent */
+    .btn--outline {
+      background: var(--accent-muted);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+    }
+
+    .btn--outline:hover {
+      opacity: 0.82;
+      transform: translateY(-1px);
+    }
+
+    .btn--lg { padding: 15px 30px; font-size: 1rem; }
+
+    /* ===========================
+       FADE-IN ANIMATION
+    =========================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.08s; }
+    .fade-in-delay-2 { transition-delay: 0.16s; }
+    .fade-in-delay-3 { transition-delay: 0.24s; }
+    .fade-in-delay-4 { transition-delay: 0.32s; }
+
+    /* ===========================
+       HEADER / NAV
+    =========================== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      background: rgba(22, 23, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition);
+    }
+
+    .header.scrolled {
+      border-bottom-color: rgba(67,67,70,0.5);
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .header__logo {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--text-primary);
+    }
+
+    .header__logo span {
+      color: var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav__links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius);
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav__links a:hover {
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4.5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .nav__hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: var(--bg-primary);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a.mobile-link {
+      font-size: 1.75rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      transition: color var(--transition);
+    }
+
+    .mobile-nav a.mobile-link:hover { color: var(--accent); }
+
+    .mobile-nav__close {
+      position: absolute;
+      top: 22px; right: 22px;
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 8px;
+      transition: color var(--transition);
+    }
+
+    .mobile-nav__close:hover { color: var(--text-primary); }
+
+    /* ===========================
+       HERO
+    =========================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Radial glow — from DS */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(250,110,67,0.07) 0%, transparent 68%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-light);
+      border-radius: 100px;
+    }
+
+    .hero__eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero__title {
+      margin-bottom: 20px;
+    }
+
+    .hero__title .highlight {
+      color: var(--accent);
+    }
+
+    .hero__subtitle {
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero__trust {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero__trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      letter-spacing: -0.01em;
+    }
+
+    .hero__trust-item i {
+      color: var(--accent);
+      font-size: 0.7rem;
+    }
+
+    /* Hero Art Placeholder */
+    .hero__visual { position: relative; }
+
+    .hero__art {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border-light);
+    }
+
+    /* ===========================
+       PROBLEM SECTION
+    =========================== */
+    .problem__blocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .problem__block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      transition: border-color var(--transition);
+    }
+
+    .problem__block:hover {
+      border-color: var(--accent-border);
+    }
+
+    .problem__block-icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .problem__block-title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .problem__block-text {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+    }
+
+    /* ===========================
+       SOLUTION SECTION
+    =========================== */
+    .solution__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .solution__benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .benefit {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      transition: border-color var(--transition);
+    }
+
+    .benefit:hover {
+      border-color: var(--accent-border);
+    }
+
+    .benefit__icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-muted);
+      border: 1px solid var(--accent-border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .benefit__content h4 {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+
+    .benefit__content p {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+    }
+
+    /* Solution Art */
+    .solution__art {
+      background: #000;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .solution__art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===========================
+       ABOUT SECTION
+    =========================== */
+    .about__inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about__avatar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .about__avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--accent-border);
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      background: var(--accent-muted);
+      border: 1px solid var(--accent-border);
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      text-align: center;
+      max-width: 180px;
+      line-height: 1.4;
+    }
+
+    .about__text {
+      margin-top: 16px;
+    }
+
+    .about__text p {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+    }
+
+    .about__text p + p { margin-top: 14px; }
+
+    .about__text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ===========================
+       PORTFOLIO
+    =========================== */
+    .portfolio__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 48px 0;
+    }
+
+    .portfolio__card {
+      position: relative;
+      aspect-ratio: 1;
+      background: #000;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition);
+      cursor: pointer;
+    }
+
+    .portfolio__card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-3px);
+    }
+
+    .portfolio__card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio__card:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio__card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 14px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .portfolio__card:hover .portfolio__card-overlay {
+      opacity: 1;
+    }
+
+    .portfolio__card-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .portfolio__card-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .portfolio__cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ===========================
+       PROCESS
+    =========================== */
+    .process__steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 56px;
+    }
+
+    .process__step {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color var(--transition);
+      position: relative;
+    }
+
+    .process__step::before {
+      content: attr(data-step);
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    .process__step:hover {
+      border-color: var(--accent-border);
+    }
+
+    .process__step-icon {
+      font-size: 1.5rem;
+      display: block;
+    }
+
+    .process__step-title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .process__step-text {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+    }
+
+    /* ===========================
+       TESTIMONIALS
+    =========================== */
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .testimonial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color var(--transition);
+    }
+
+    .testimonial:hover { border-color: var(--accent-border); }
+
+    .testimonial__stars {
+      display: flex;
+      gap: 3px;
+      color: var(--accent);
+      font-size: 0.78rem;
+    }
+
+    .testimonial__quote {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      letter-spacing: -0.01em;
+      flex: 1;
+    }
+
+    .testimonial__author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .testimonial__avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-muted);
+      border: 1px solid var(--accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .testimonial__name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .testimonial__role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: -0.01em;
+    }
+
+    /* ===========================
+       FAQ
+    =========================== */
+    .faq__list {
+      max-width: 700px;
+      margin: 48px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq__item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+
+    .faq__item.open { border-color: var(--accent-border); }
+
+    .faq__question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      transition: color var(--transition);
+    }
+
+    .faq__question:hover { color: var(--accent); }
+
+    .faq__icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+      color: var(--text-muted);
+      font-size: 0.65rem;
+    }
+
+    .faq__item.open .faq__icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--cta-color);
+      transform: rotate(45deg);
+    }
+
+    .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      padding: 0 20px;
+    }
+
+    .faq__answer-inner {
+      padding-bottom: 18px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      letter-spacing: -0.01em;
+      border-top: 1px solid var(--border-light);
+      padding-top: 14px;
+    }
+
+    .faq__item.open .faq__answer { max-height: 300px; }
+
+    /* ===========================
+       FINAL CTA
+    =========================== */
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(250,110,67,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .final-cta .container { position: relative; z-index: 1; }
+
+    .final-cta .section-title { max-width: 640px; margin: 0 auto 16px; }
+
+    .final-cta .section-sub { margin: 0 auto 36px; }
+
+    .final-cta__note {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      letter-spacing: -0.01em;
+    }
+
+    .final-cta__note i { color: var(--accent); font-size: 0.7rem; }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    .footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer__logo {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+    }
+
+    .footer__logo span { color: var(--accent); }
+
+    .footer__tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .footer__links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer__ig {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+
+    .footer__ig:hover { color: var(--accent); }
+
+    .footer__copy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: -0.01em;
+    }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 1024px) {
+      .process__steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+
+      .nav__links, .nav > .btn { display: none; }
+      .nav__hamburger { display: flex; }
+
+      .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero__visual { order: -1; max-width: 360px; margin: 0 auto; width: 100%; }
+
+      .problem__blocks { grid-template-columns: 1fr; }
+
+      .solution__inner { grid-template-columns: 1fr; gap: 36px; }
+      .solution__art { order: -1; }
+
+      .about__inner { grid-template-columns: 1fr; gap: 28px; }
+      .about__avatar-wrap { flex-direction: row; align-items: center; }
+
+      .portfolio__grid { grid-template-columns: repeat(2, 1fr); }
+
+      .process__steps { grid-template-columns: 1fr; }
+
+
+      .testimonials__grid { grid-template-columns: 1fr; }
+
+      .footer__inner { flex-direction: column; text-align: center; }
+      .footer__links { flex-direction: column; gap: 12px; }
+    }
+
+    @media (max-width: 480px) {
+      .portfolio__grid { grid-template-columns: 1fr; }
+      .hero__actions { flex-direction: column; align-items: flex-start; }
+      .hero__actions .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       HEADER / NAV
+  =========================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#hero" class="header__logo">MTS<span> Logos</span></a>
+        <nav class="nav">
+          <ul class="nav__links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+          <a href="https://ig.me/m/mtslogos" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            <i class="fa-brands fa-instagram"></i> Get a Quote
+          </a>
+          <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
+    <a href="https://ig.me/m/mtslogos" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+      <i class="fa-brands fa-instagram"></i> Get a Quote
+    </a>
+  </div>
+
+  <main>
+
+    <!-- ===========================
+         HERO
+    =========================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <div class="hero__eyebrow fade-in">
+              <span class="hero__eyebrow-dot"></span>
+              Handcrafted Lettering &amp; Digital Art
+            </div>
+            <h1 class="t-display hero__title fade-in fade-in-delay-1">
+              Make your brand<br />
+              <span class="highlight">stand out.</span>
+            </h1>
+            <p class="t-intro hero__subtitle fade-in fade-in-delay-2">
+              Custom lettering and logos crafted by hand — every stroke designed
+              to give your brand an identity that's impossible to ignore.
+            </p>
+            <div class="hero__actions fade-in fade-in-delay-3">
+              <a href="https://ig.me/m/mtslogos" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+                <i class="fa-brands fa-instagram"></i>
+                I Want My Exclusive Logo
+              </a>
+              <a href="#portfolio" class="btn btn--ghost btn--lg">See Portfolio</a>
+            </div>
+            <div class="hero__trust fade-in fade-in-delay-4">
+              <span class="hero__trust-item">
+                <i class="fa-solid fa-circle-check"></i> Revisions until approved
+              </span>
+              <span class="hero__trust-item">
+                <i class="fa-solid fa-circle-check"></i> 100% exclusive
+              </span>
+              <span class="hero__trust-item">
+                <i class="fa-solid fa-circle-check"></i> Premium quality
+              </span>
+            </div>
+          </div>
+
+          <div class="hero__visual fade-in fade-in-delay-2">
+            <div class="hero__art">
+              <img src="Trabalhos/IMG_3344.JPG" alt="Main Street Barbershop — Handcrafted Lettering by MTS Logos" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         THE PROBLEM
+    =========================== -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-eyebrow">The Problem</span>
+          <h2 class="t-headline section-title">
+            How many brands have you seen<br />with the <span class="t-accent">exact same logo?</span>
+          </h2>
+          <div class="section-divider section-divider--center"></div>
+          <p class="t-intro section-sub">
+            Automatic generators, Canva templates, stock image logos. The market is flooded
+            with brands that look like carbon copies of each other. When your visual identity
+            is generic, your brand goes unnoticed — and you lose customers before they even talk to you.
+          </p>
+        </div>
+        <div class="problem__blocks">
+          <div class="problem__block fade-in fade-in-delay-1">
+            <span class="problem__block-icon">🔁</span>
+            <p class="problem__block-title">Logo identical to your competitor's</p>
+            <p class="problem__block-text">Templates used by thousands of businesses at the same time, with zero originality or distinctiveness.</p>
+          </div>
+          <div class="problem__block fade-in fade-in-delay-2">
+            <span class="problem__block-icon">🤖</span>
+            <p class="problem__block-title">AI-generated art with no soul</p>
+            <p class="problem__block-text">No personality, no story, no real differentiation — just patterns recycled from millions of other images.</p>
+          </div>
+          <div class="problem__block fade-in fade-in-delay-3">
+            <span class="problem__block-icon">📉</span>
+            <p class="problem__block-title">Weak brand = less credibility</p>
+            <p class="problem__block-text">Customers judge a business by its visual identity before anything else. A generic logo communicates mediocrity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         THE SOLUTION
+    =========================== -->
+    <section class="section" id="solution">
+      <div class="container">
+        <div class="solution__inner">
+          <div>
+            <span class="section-eyebrow fade-in">The Solution</span>
+            <h2 class="t-headline section-title fade-in">
+              Handcrafted lettering:<br />
+              art drawn by hand,<br />
+              <span class="t-accent">exclusively for you</span>
+            </h2>
+            <div class="section-divider fade-in"></div>
+            <p class="t-body fade-in">
+              Every stroke is drawn by Matheus, a former tattoo artist with years of precision,
+              control, and obsession for detail. Handcrafted lettering creates unique logos —
+              with personality, texture, and an identity that no generator can ever replicate.
+            </p>
+            <div class="solution__benefits">
+              <div class="benefit fade-in fade-in-delay-1">
+                <div class="benefit__icon">✍️</div>
+                <div class="benefit__content">
+                  <h4>100% hand-drawn</h4>
+                  <p>Every letter, every curve created exclusively for your brand.</p>
+                </div>
+              </div>
+              <div class="benefit fade-in fade-in-delay-2">
+                <div class="benefit__icon">🎨</div>
+                <div class="benefit__content">
+                  <h4>High-resolution digital art</h4>
+                  <p>Delivered in all formats (PNG, SVG, PDF) ready for any use.</p>
+                </div>
+              </div>
+              <div class="benefit fade-in fade-in-delay-3">
+                <div class="benefit__icon">♾️</div>
+                <div class="benefit__content">
+                  <h4>Total exclusivity</h4>
+                  <p>Your logo will never be sold, reused, or adapted for another client.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="solution__art fade-in fade-in-delay-2">
+            <img src="Trabalhos/IMG_3272.JPG" alt="So Cal Image Car Club — Handcrafted Lettering by MTS Logos" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         ABOUT THE ARTIST
+    =========================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__avatar-wrap fade-in">
+            <img src="minha foto.png" alt="Matheus — MTS Logos" class="about__avatar" />
+            <div class="about__badge">
+              <i class="fa-solid fa-circle" style="font-size:0.4rem;"></i>
+              Digital Artist
+            </div>
+          </div>
+          <div>
+            <span class="section-eyebrow fade-in">About the Artist</span>
+            <h2 class="t-headline section-title fade-in">
+              Who is <span class="t-accent">Matheus?</span>
+            </h2>
+            <div class="section-divider fade-in"></div>
+            <div class="about__text fade-in">
+              <p>
+                Matheus spent years as a tattoo artist, mastering the art of creating precise,
+                detailed, and unique designs directly on people's skin. Over time, he channeled
+                that skill into the digital world — specializing in <strong>custom lettering</strong>
+                and high-quality digital art.
+              </p>
+              <p>
+                Today, he creates logos and visual identities that carry the same level of attention
+                and care as a tattoo: every piece is unique, tailored to the client, and built to last.
+              </p>
+            </div>
+            <div style="margin-top:24px;" class="fade-in fade-in-delay-1">
+              <a href="https://ig.me/m/mtslogos" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                <i class="fa-brands fa-instagram"></i> Talk to Matheus
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         PORTFOLIO
+    =========================== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-eyebrow">Portfolio</span>
+          <h2 class="t-headline section-title">Work that speaks <span class="t-accent">for itself</span></h2>
+          <div class="section-divider section-divider--center"></div>
+          <p class="t-body section-sub">
+            Every piece is one of a kind — see more at Instagram
+            <a href="https://www.instagram.com/mtslogos/" target="_blank" rel="noopener noreferrer"
+               style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">@mtslogos</a>
+          </p>
+        </div>
+
+        <div class="portfolio__grid">
+          <div class="portfolio__card fade-in fade-in-delay-1">
+            <img src="Trabalhos/IMG_3272.JPG" alt="So Cal Image Car Club — Lettering" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">So Cal Image Car Club</span>
+              <span class="portfolio__card-tag">Lettering</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-2">
+            <img src="Trabalhos/IMG_3315.JPG" alt="Scars & Tattoos — Gothic Lettering" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Scars & Tattoos</span>
+              <span class="portfolio__card-tag">Lettering</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-3">
+            <img src="Trabalhos/IMG_3340.JPG" alt="Ninety-Two Boxing — Logo" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Ninety-Two Boxing</span>
+              <span class="portfolio__card-tag">Logo</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-1">
+            <img src="Trabalhos/IMG_3342.JPG" alt="Brims The Barber — Monogram" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Brims The Barber</span>
+              <span class="portfolio__card-tag">Monogram</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-2">
+            <img src="Trabalhos/IMG_3344.JPG" alt="Main Street Barbershop — Lettering" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Main Street Barbershop</span>
+              <span class="portfolio__card-tag">Lettering</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-3">
+            <img src="Trabalhos/IMG_3346.JPG" alt="Party Now Pay Later — Digital Art" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Party Now Pay Later</span>
+              <span class="portfolio__card-tag">Digital Art</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-1">
+            <img src="Trabalhos/IMG_3348.JPG" alt="Solid Talk Podcast — Logo" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Solid Talk Podcast</span>
+              <span class="portfolio__card-tag">Logo</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-2">
+            <img src="Trabalhos/IMG_3352.JPG" alt="Sign Painter Los Angeles — Lettering" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Sign Painter LA</span>
+              <span class="portfolio__card-tag">Lettering</span>
+            </div>
+          </div>
+          <div class="portfolio__card fade-in fade-in-delay-3">
+            <img src="Trabalhos/IMG_3353.JPG" alt="Rare Breed — Raised By Pain — Digital Art" loading="lazy" />
+            <div class="portfolio__card-overlay">
+              <span class="portfolio__card-label">Rare Breed</span>
+              <span class="portfolio__card-tag">Digital Art</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__cta fade-in">
+          <a href="https://www.instagram.com/mtslogos/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">
+            <i class="fa-brands fa-instagram"></i>
+            See Full Portfolio → Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         PROCESS
+    =========================== -->
+    <section class="section section--alt" id="process">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-eyebrow">How It Works</span>
+          <h2 class="t-headline section-title">
+            From briefing to delivery —<br /><span class="t-accent">simple and transparent</span>
+          </h2>
+          <div class="section-divider section-divider--center"></div>
+        </div>
+        <div class="process__steps">
+          <div class="process__step fade-in fade-in-delay-1" data-step="01">
+            <span class="process__step-icon">📝</span>
+            <p class="process__step-title">Briefing</p>
+            <p class="process__step-text">You tell me everything about your brand: niche, references, personality, and desired style.</p>
+          </div>
+          <div class="process__step fade-in fade-in-delay-2" data-step="02">
+            <span class="process__step-icon">✏️</span>
+            <p class="process__step-title">Creation</p>
+            <p class="process__step-text">I develop the concept and present the first hand-drawn options crafted specifically for you.</p>
+          </div>
+          <div class="process__step fade-in fade-in-delay-3" data-step="03">
+            <span class="process__step-icon">🔄</span>
+            <p class="process__step-title">Revisions</p>
+            <p class="process__step-text">We refine together until you love every detail. Revisions are included in the package.</p>
+          </div>
+          <div class="process__step fade-in fade-in-delay-4" data-step="04">
+            <span class="process__step-icon">📦</span>
+            <p class="process__step-title">Delivery</p>
+            <p class="process__step-text">You receive the final files in high resolution in all necessary formats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         TESTIMONIALS
+         Replace with real testimonials
+    =========================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-eyebrow">Testimonials</span>
+          <h2 class="t-headline section-title">What clients <span class="t-accent">are saying</span></h2>
+          <div class="section-divider section-divider--center"></div>
+        </div>
+
+        <!-- Replace with real testimonials -->
+        <div class="testimonials__grid">
+          <div class="testimonial fade-in fade-in-delay-1">
+            <div class="testimonial__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial__quote">
+              "I was blown away by the level of detail. Matheus captured exactly what I wanted for my brand. Next-level logo work."
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">R</div>
+              <div>
+                <p class="testimonial__name">Rafael S.</p>
+                <p class="testimonial__role">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial fade-in fade-in-delay-2">
+            <div class="testimonial__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial__quote">
+              "I was looking for something handcrafted for my tattoo studio's logo. The result exceeded every expectation. Real art."
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">J</div>
+              <div>
+                <p class="testimonial__name">Juliana T.</p>
+                <p class="testimonial__role">Tattoo Artist</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial fade-in fade-in-delay-3">
+            <div class="testimonial__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial__quote">
+              "The whole process was smooth, super attentive, and with revisions until it was perfect. Highly recommend!"
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">L</div>
+              <div>
+                <p class="testimonial__name">Lucas M.</p>
+                <p class="testimonial__role">Musician</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FAQ
+    =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="t-headline section-title">Frequently Asked <span class="t-accent">Questions</span></h2>
+          <div class="section-divider section-divider--center"></div>
+        </div>
+
+        <div class="faq__list">
+          <div class="faq__item fade-in fade-in-delay-1">
+            <button class="faq__question" aria-expanded="false">
+              How long does it take to receive my logo?
+              <span class="faq__icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                It depends on the chosen package. The Essential takes 7–10 business days, and the Full Identity takes 14–21 days. You'll follow the progress in real time.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in fade-in-delay-1">
+            <button class="faq__question" aria-expanded="false">
+              How does payment work?
+              <span class="faq__icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                I work with PayPal, Wise, or we can arrange another method. Typically it's 50% upfront and the remaining 50% upon final delivery.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in fade-in-delay-2">
+            <button class="faq__question" aria-expanded="false">
+              What if I don't like the result?
+              <span class="faq__icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                We work together through revision rounds until you approve it. I don't deliver the final files until you're happy with every detail.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in fade-in-delay-2">
+            <button class="faq__question" aria-expanded="false">
+              Do I receive editable files?
+              <span class="faq__icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Final files are delivered in ready-to-use formats (PNG, SVG, PDF). Editable source files can be negotiated depending on the package.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in fade-in-delay-3">
+            <button class="faq__question" aria-expanded="false">
+              Can I request lettering for a tattoo design?
+              <span class="faq__icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Absolutely! Lettering for tattoos is one of my specialties. Send me a message and let's talk about what you have in mind.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FINAL CTA
+    =========================== -->
+    <section class="section final-cta">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-eyebrow" style="justify-content:center; display:flex;">Limited Spots Available</span>
+        </div>
+        <h2 class="t-headline section-title fade-in" style="max-width:640px; margin:16px auto 0;">
+          Ready to have a brand that<br />truly <span class="t-accent">stands out?</span>
+        </h2>
+        <div class="section-divider section-divider--center fade-in"></div>
+        <p class="t-intro section-sub fade-in">
+          Each project is done one at a time — with full attention and dedication.
+          That's why I work with a limited number of clients per month. If you're ready
+          to invest in a unique visual identity, send me a message now.
+        </p>
+        <div style="margin-top:32px;" class="fade-in fade-in-delay-1">
+          <a href="https://ig.me/m/mtslogos" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+            💬 Message Matheus on Instagram
+          </a>
+        </div>
+        <div class="final-cta__note fade-in fade-in-delay-2">
+          <i class="fa-solid fa-clock"></i>
+          I typically respond within 2 hours.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===========================
+       FOOTER
+  =========================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__logo">MTS<span> Logos</span></div>
+          <div class="footer__tagline">Handcrafted art. Unique identity.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.instagram.com/mtslogos/" target="_blank" rel="noopener noreferrer" class="footer__ig">
+            <i class="fa-brands fa-instagram"></i> @mtslogos
+          </a>
+          <span class="footer__copy">© 2026 MTS Logos. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===========================
+       JAVASCRIPT
+  =========================== -->
+  <script>
+    // ── Header scroll ────────────────────────────────────────────────────────
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 16);
+    }, { passive: true });
+
+    // ── Mobile nav ───────────────────────────────────────────────────────────
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileNav    = document.getElementById('mobileNav');
+    const mobileClose  = document.getElementById('mobileNavClose');
+
+    function openNav()  { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+
+    hamburgerBtn.addEventListener('click', openNav);
+    mobileClose.addEventListener('click', closeNav);
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeNav));
+
+    // ── Intersection Observer — fade-in ──────────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ── FAQ Accordion ─────────────────────────────────────────────────────────
+    document.querySelectorAll('.faq__item').forEach(item => {
+      item.querySelector('.faq__question').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq__item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          item.querySelector('.faq__question').setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

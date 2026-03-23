@@ -35,6 +35,14 @@
 - [x] Response time updated to 2 hours
 - [x] Footer year updated to 2026
 
+### v1.2 — Deploy & Custom Domain (March 2026)
+- [x] GitHub Pages deploy via GitHub Actions workflow
+- [x] Custom domain configured: **mtslogos.com**
+- [x] DNS records: 4x A records + CNAME (www → vertixmkt.github.io)
+- [x] CNAME file added to repo
+- [x] HTTPS enforcement (automatic via GitHub)
+- [x] Repository: `github.com/vertixmkt/Site-MTS-Logos`
+
 ## Sections Live
 | Section | Status |
 |---|---|
@@ -52,7 +60,6 @@
 
 ## Pending / Next Steps
 - [ ] Replace placeholder testimonials with real client reviews
-- [ ] Add custom domain and deploy (Vercel, Netlify, or GitHub Pages)
 - [ ] Add SEO: `og:image`, structured data (LocalBusiness schema)
 - [ ] Optimize images (compress JPGs, add WebP variants)
 - [ ] Add favicon with MTS Logos branding

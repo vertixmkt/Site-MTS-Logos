@@ -16,8 +16,8 @@
 
 ### v1.1 — Real Content Integration (March 2026)
 - [x] Custom headline font: Old London (`@font-face`) applied to all h1/h2
-- [x] Hero section: updated headline ("Make your brand stand out.") + portfolio image (Main Street Barbershop)
-- [x] Solution section: replaced placeholder with real artwork (So Cal Image Car Club)
+- [x] Hero section: updated headline ("Make your brand stand out."), centered layout
+- [x] Solution section: centered layout, image removed
 - [x] About section: artist photo integrated (`minha foto.png`)
 - [x] Badge updated to "Digital Artist"
 - [x] About headline updated to "Who is Matheus?"
@@ -42,6 +42,13 @@
 - [x] CNAME file added to repo
 - [x] HTTPS enforcement (automatic via GitHub)
 - [x] Repository: `github.com/vertixmkt/Site-MTS-Logos`
+- [x] Header logo replaced with MTS Logos image (`MTS Final branco peuqeno.png`)
+
+### v1.3 — Hotmart Materials (March 2026)
+- [x] Client Guide PDF (5 pages): About, Process, Briefing Checklist, Deliverables, FAQ & Contact
+- [x] Portfolio Preview JPEGs (2 images): 3x3 grid + highlights with CTA
+- [x] All materials follow website design system (dark theme, Old London font, orange accent)
+- [x] Bundled as `MTS Logos - Hotmart Files.zip` for Hotmart upload
 
 ## Sections Live
 | Section | Status |
